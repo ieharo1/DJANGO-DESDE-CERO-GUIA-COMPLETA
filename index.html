@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende Django desde cero con nuestra guía completa. Tutoriales, ejemplos prácticos y ejercicios.">
+    <meta name="author" content="Isaac Esteban Haro Torres">
+    <title>🎸 Django Desde Cero - Guía Completa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">🎸 Django Desde Cero</a>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#temas">Temas</a></li>
+                    <li><a href="#contenido">Contenido</a></li>
+                    <li><a href="#ejemplos">Ejemplos</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1>🎸 Django Desde Cero - Guía Completa</h1>
+                <p class="hero-subtitle">Aprende Django desde los fundamentos hasta conceptos avanzados</p>
+                <blockquote class="hero-quote">
+                    "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design."
+                </blockquote>
+                <a href="#temas" class="btn btn-primary">Explorar Temas</a>
+            </div>
+        </section>
+
+        <section id="temas" class="topics">
+            <div class="container">
+                <h2>📖 Temas del Curso</h2>
+                <p class="topics-intro">Haz clic en cualquier tema para ver el contenido detallado</p>
+                
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <span class="topic-icon">📌</span>
+                            <h3>Módulo 1: Fundamentos</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema1-1">Introducción a Django</a></li>
+                            <li><a href="#tema1-2">Instalación y configuración</a></li>
+                            <li><a href="#tema1-3">MTV Pattern</a></li>
+                            <li><a href="#tema1-4">Models, Views, Templates</a></li>
+                        </ul>
+                        <a href="#tema1-1" class="btn-topic">Ver tema →</a>
+                    </div>
+
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <span class="topic-icon">⚙️</span>
+                            <h3>Módulo 2: Intermedio</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema2-1">Django ORM</a></li>
+                            <li><a href="#tema2-2">Forms y ModelForms</a></li>
+                            <li><a href="#tema2-3">Autenticación</a></li>
+                            <li><a href="#tema2-4">Admin personalizado</a></li>
+                        </ul>
+                        <a href="#tema2-1" class="btn-topic">Ver tema →</a>
+                    </div>
+
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <span class="topic-icon">🚀</span>
+                            <h3>Módulo 3: Avanzado</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema3-1">APIs REST</a></li>
+                            <li><a href="#tema3-2">WebSockets con Channels</a></li>
+                            <li><a href="#tema3-3">Celery para tareas</a></li>
+                            <li><a href="#tema3-4">Deploy con Gunicorn/Nginx</a></li>
+                        </ul>
+                        <a href="#tema3-1" class="btn-topic">Ver tema →</a>
+                    </div>
+                </div>
+
+                <!-- Contenido Detallado -->
+                <div class="topic-content">
+                    <div class="content-detail" id="tema1-1">
+                        <h3>📌 Introducción a Django</h3>
+                        <div class="content-body">
+                            <p><strong>¿Qué es Django?</strong> Django es un framework web de alto nivel para Python que fomenta el desarrollo rápido y el diseño limpio y pragmático.</p>
+                            
+                            <h4>Características principales:</h4>
+                            <ul>
+                                <li><strong>Baterías incluidas:</strong> Viene con todo lo necesario</li>
+                                <li><strong>ORM potente:</strong> Base de datos abstracta</li>
+                                <li><strong>Admin automático:</strong> Panel de administración generado</li>
+                                <li><strong>Seguridad:</strong> Protección contra ataques comunes</li>
+                            </ul>
+
+                            <h4>Historia:</h4>
+                            <p>Django fue desarrollado internamente desde 2003 y liberado como open source en 2005. Lleva el nombre del músico de jazz Django Reinhardt.</p>
+
+                            <div class="info-box">
+                                <strong>💡 Dato curioso:</strong> Instagram, Pinterest y Mozilla usan Django en producción.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <div class="content-detail" id="tema1-2">
+                        <h3>🔧 Instalación y Configuración</h3>
+                        <div class="content-body">
+                            <h4>Instalar Django:</h4>
+                            <pre><code># Crear entorno virtual
+python -m venv venv
+
+# Activar entorno (Windows)
+venv\Scripts\activate
+
+# Activar entorno (Linux/Mac)
+source venv/bin/activate
+
+# Instalar Django
+pip install django
+
+# Verificar instalación
+python -m django --version</code></pre>
+
+                            <h4>Crear proyecto:</h4>
+                            <pre><code>django-admin startproject mi_proyecto
+cd mi_proyecto
+python manage.py runserver</code></pre>
+
+                            <div class="info-box">
+                                <strong>⚠️ Importante:</strong> Usa siempre entornos virtuales para aislar dependencias.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <div class="content-detail" id="tema1-3">
+                        <h3>🏗️ MTV Pattern</h3>
+                        <div class="content-body">
+                            <p>Django sigue el patrón <strong>Model-Template-View (MTV)</strong>, una variación del MVC tradicional.</p>
+
+                            <table class="info-table">
+                                <tr>
+                                    <th>Componente</th>
+                                    <th>Responsabilidad</th>
+                                </tr>
+                                <tr>
+                                    <td>Model</td>
+                                    <td>Estructura de datos y base de datos</td>
+                                </tr>
+                                <tr>
+                                    <td>Template</td>
+                                    <td>Presentación y HTML</td>
+                                </tr>
+                                <tr>
+                                    <td>View</td>
+                                    <td>Lógica de negocio</td>
+                                </tr>
+                            </table>
+
+                            <h4>Flujo de una petición:</h4>
+                            <ol>
+                                <li>El usuario hace petición al servidor</li>
+                                <li>Django routing determina la View</li>
+                                <li>La View consulta el Model</li>
+                                <li>La View renderiza el Template</li>
+                                <li>Se devuelve la respuesta HTTP</li>
+                            </ol>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <div class="content-detail" id="tema1-4">
+                        <h3>📦 Models, Views, Templates</h3>
+                        <div class="content-body">
+                            <h4>Modelo:</h4>
+                            <pre><code>from django.db import models
+
+class Post(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title</code></pre>
+
+                            <h4>Vista:</h4>
+                            <pre><code>from django.shortcuts import render
+from .models import Post
+
+def post_list(request):
+    posts = Post.objects.all()
+    return render(request, 'posts/list.html', {'posts': posts})</code></pre>
+
+                            <h4>Template:</h4>
+                            <pre><code>{% raw %}{% extends 'base.html' %}
+
+{% block content %}
+  {% for post in posts %}
+    &lt;h2&gt;{{ post.title }}&lt;/h2&gt;
+    &lt;p&gt;{{ post.content }}&lt;/p&gt;
+  {% endfor %}
+{% endblock %}{% endraw %}</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <div class="content-detail" id="tema2-1">
+                        <h3>🗄️ Django ORM</h3>
+                        <div class="content-body">
+                            <h4>Consultas básicas:</h4>
+                            <pre><code># Crear
+Post.objects.create(title='Nuevo', content='...')
+
+# Leer todos
+posts = Post.objects.all()
+
+# Filtrar
+posts = Post.objects.filter(title__icontains='django')
+
+# Obtener uno
+post = Post.objects.get(id=1)
+
+# Actualizar
+post.title = 'Actualizado'
+post.save()
+
+# Eliminar
+post.delete()</code></pre>
+
+                            <h4>Relaciones:</h4>
+                            <pre><code>class Author(models.Model):
+    name = models.CharField(max_length=100)
+
+class Book(models.Model):
+    title = models.CharField(max_length=200)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <div class="content-detail" id="tema2-2">
+                        <h3>📝 Forms y ModelForms</h3>
+                        <div class="content-body">
+                            <h4>Formulario básico:</h4>
+                            <pre><code>from django import forms
+
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea)</code></pre>
+
+                            <h4>ModelForm:</h4>
+                            <pre><code>from django.forms import ModelForm
+from .models import Post
+
+class PostForm(ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'content']</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> ModelForms generan automáticamente campos basados en el modelo.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <div class="content-detail" id="tema2-3">
+                        <h3>🔐 Autenticación</h3>
+                        <div class="content-body">
+                            <h4>Login:</h4>
+                            <pre><code>from django.contrib.auth import authenticate, login
+
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user:
+            login(request, user)</code></pre>
+
+                            <h4>Proteger vistas:</h4>
+                            <pre><code>from django.contrib.auth.decorators import login_required
+
+@login_required
+def dashboard(request):
+    return render(request, 'dashboard.html')</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <div class="content-detail" id="tema2-4">
+                        <h3>⚙️ Admin Personalizado</h3>
+                        <div class="content-body">
+                            <h4>Registrar modelo:</h4>
+                            <pre><code>from django.contrib import admin
+from .models import Post
+
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ['title', 'created_at', 'author']
+    list_filter = ['created_at']
+    search_fields = ['title', 'content']</code></pre>
+
+                            <h4>Personalizar admin:</h4>
+                            <pre><code># admin.py
+admin.site.site_header = 'Mi Sitio Admin'
+admin.site.site_title = 'Admin Portal'</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <div class="content-detail" id="tema3-1">
+                        <h3>🌐 APIs REST</h3>
+                        <div class="content-body">
+                            <h4>Django REST Framework:</h4>
+                            <pre><code># serializers.py
+from rest_framework import serializers
+from .models import Post
+
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = '__all__'</code></pre>
+
+                            <h4>ViewSet:</h4>
+                            <pre><code># views.py
+from rest_framework import viewsets
+
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <div class="content-detail" id="tema3-2">
+                        <h3>🔌 WebSockets con Channels</h3>
+                        <div class="content-body">
+                            <h4>Instalar Channels:</h4>
+                            <pre><code>pip install channels channels-redis</code></pre>
+
+                            <h4>Consumidor WebSocket:</h4>
+                            <pre><code># consumers.py
+import json
+from channels.generic.websocket import AsyncWebsocketConsumer
+
+class ChatConsumer(AsyncWebsocketConsumer):
+    async def connect(self):
+        await self.accept()
+
+    async def receive(self, text_data):
+        await self.send(text_data=json.dumps({'message': text_data}))</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <div class="content-detail" id="tema3-3">
+                        <h3>📋 Celery para Tareas</h3>
+                        <div class="content-body">
+                            <h4>Configurar Celery:</h4>
+                            <pre><code># celery.py
+from celery import Celery
+
+app = Celery('mi_proyecto')
+app.config_from_object('django.conf:settings', namespace='CELERY')
+app.autodiscover_tasks()</code></pre>
+
+                            <h4>Tarea asíncrona:</h4>
+                            <pre><code>@app.task
+def send_email(user_id):
+    # Enviar email
+    pass
+
+# Llamar tarea
+send_email.delay(user_id=1)</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <div class="content-detail" id="tema3-4">
+                        <h3>🚀 Deploy con Gunicorn/Nginx</h3>
+                        <div class="content-body">
+                            <h4>Gunicorn:</h4>
+                            <pre><code># Instalar
+pip install gunicorn
+
+# Ejecutar
+gunicorn mi_proyecto.wsgi:application --bind 0.0.0.0:8000</code></pre>
+
+                            <h4>Nginx config:</h4>
+                            <pre><code>server {
+    listen 80;
+    server_name midominio.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+    }
+
+    location /static/ {
+        alias /var/www/static/;
+    }
+}</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contenido" class="content">
+            <div class="container">
+                <h2>📚 Contenido del Curso</h2>
+                <div class="modules">
+                    <div class="module">
+                        <h3>Módulo 1: Fundamentos</h3>
+                        <ul>
+                            <li>Introducción a Django</li>
+                            <li>Instalación y configuración</li>
+                            <li>MTV Pattern</li>
+                            <li>Models, Views, Templates</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+                    <div class="module">
+                        <h3>Módulo 2: Intermedio</h3>
+                        <ul>
+                            <li>Django ORM</li>
+                            <li>Forms y ModelForms</li>
+                            <li>Autenticación</li>
+                            <li>Admin personalizado</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+                    <div class="module">
+                        <h3>Módulo 3: Avanzado</h3>
+                        <ul>
+                            <li>APIs REST</li>
+                            <li>WebSockets con Channels</li>
+                            <li>Celery para tareas</li>
+                            <li>Deploy con Gunicorn/Nginx</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ejemplos" class="examples">
+            <div class="container">
+                <h2>📝 Ejemplos Rápidos</h2>
+                <div class="code-block">
+                    <h3>Modelo Django</h3>
+                    <pre><code class="language-python">from django.db import models
+
+class Post(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title</code></pre>
+                </div>
+                <div class="code-block">
+                    <h3>Vista Basada en Clases</h3>
+                    <pre><code class="language-python">from django.views.generic import ListView, DetailView
+from .models import Post
+
+class PostListView(ListView):
+    model = Post
+    template_name = 'posts/list.html'
+    context_object_name = 'posts'
+    paginate_by = 10</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="recursos" class="resources">
+            <div class="container">
+                <h2>📖 Recursos Adicionales</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h4>Documentación Oficial</h4>
+                        <ul>
+                            <li><a href="https://docs.djangoproject.com/" target="_blank">Django Documentation</a></li>
+                            <li><a href="https://docs.djangoproject.com/en/stable/intro/tutorial01/" target="_blank">Django Tutorial</a></li>
+                            <li><a href="https://djangopackages.org/" target="_blank">Django Packages</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h4>Herramientas</h4>
+                        <ul>
+                            <li>Django Debug Toolbar</li>
+                            <li>Django REST Framework</li>
+                            <li>pytest-django</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h4>Comunidades</h4>
+                        <ul>
+                            <li><a href="https://www.djangoproject.com/community/" target="_blank">Django Community</a></li>
+                            <li>Stack Overflow - Django</li>
+                            <li>Reddit r/django</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>👨‍💻 Desarrollado por Isaac Esteban Haro Torres</h2>
+                <p class="contact-title">Ingeniero en Sistemas · Full Stack · Automatización · Data</p>
+                <div class="contact-info">
+                    <p>📧 Email: <a href="mailto:zackharo1@gmail.com">zackharo1@gmail.com</a></p>
+                    <p>📱 WhatsApp: 098805517</p>
+                    <p>💻 GitHub: <a href="https://github.com/ieharo1" target="_blank">github.com/ieharo1</a></p>
+                    <p>🌐 Portafolio: <a href="https://ieharo1.github.io/portafolio-isaac.haro/" target="_blank">ieharo1.github.io/portafolio-isaac.haro/</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Isaac Esteban Haro Torres - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
