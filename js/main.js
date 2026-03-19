@@ -1,7 +1,7 @@
 // Main JavaScript para Django Desde Cero
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎸 Django Desde Cero - Sitio cargado correctamente');
+    console.log('☕ Django Desde Cero - Sitio cargado correctamente');
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         const header = document.querySelector('.header');
         if (window.pageYOffset > 100) {
-            header.style.background = 'rgba(4, 26, 18, 0.98)';
-            header.style.boxShadow = '0 4px 30px rgba(9, 46, 32, 0.3)';
+            header.style.background = 'rgba(178, 88, 10, 0.98)';
+            header.style.boxShadow = '0 4px 30px rgba(248, 152, 32, 0.3)';
         } else {
             header.style.background = 'var(--secondary-color)';
             header.style.boxShadow = 'none';
@@ -68,5 +68,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    console.log('%c🎸 ¡Bienvenido a Django Desde Cero!', 'font-size: 20px; color: #092E20; font-weight: bold;');
+    console.log('%c☕ ¡Bienvenido a Django Desde Cero!', 'font-size: 20px; color: #092E20; font-weight: bold;');
 });
